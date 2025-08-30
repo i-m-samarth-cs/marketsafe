@@ -25,21 +25,21 @@ const modules = [
     title: 'Module 2: The Dangers of "Pump and Dump"',
     content:
       'This form of securities fraud involves artificially inflating the price of a stock through false and misleading positive statements, in order to sell the cheaply purchased stock at a higher price. We teach you how to analyze stock promotions critically.',
-    image: 'https://picsum.photos/600/401',
+    image: 'https://picsum.photos/601/401',
     'data-ai-hint': 'stock market',
   },
   {
     title: 'Module 3: Recognizing Phishing Scams',
     content:
       'Phishing scams use fraudulent emails, texts, or websites to trick individuals into disclosing sensitive information, such as passwords and credit card numbers. This module covers common tactics and how to protect your accounts.',
-    image: 'https://picsum.photos/600/402',
+    image: 'https://picsum.photos/602/402',
     'data-ai-hint': 'cyber security',
   },
   {
     title: 'Module 4: Understanding Cryptocurrency Risks',
     content:
       'While a legitimate technology, the cryptocurrency space is ripe with scams, from fake initial coin offerings (ICOs) to fraudulent exchanges. Learn how to navigate the crypto world more safely.',
-    image: 'https://picsum.photos/600/403',
+    image: 'https://picsum.photos/603/403',
     'data-ai-hint': 'cryptocurrency blockchain',
   },
 ];
