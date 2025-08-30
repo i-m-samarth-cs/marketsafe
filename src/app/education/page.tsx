@@ -36,7 +36,7 @@ const modules = [
     image: 'https://picsum.photos/603/403',
     'data-ai-hint': 'cryptocurrency blockchain',
   },
-    {
+  {
     title: 'Affinity Fraud Explained',
     content:
       'This type of scam targets members of identifiable groups, such as religious or ethnic communities. Fraudsters exploit the trust and friendship that exist in these groups to peddle fraudulent investments.',
@@ -63,6 +63,41 @@ const modules = [
       'This involves high-pressure sales calls from salespeople who use deceptive tactics to persuade investors to buy worthless or overpriced stocks. Be wary of unsolicited investment offers over the phone.',
     image: 'https://picsum.photos/607/407',
     'data-ai-hint': 'call center',
+  },
+  {
+    title: 'Deepfake and Media Analysis',
+    content:
+      'Learn how AI uses computer vision to detect deepfakes and manipulated media in videos and images shared by supposed market leaders, preventing the spread of misinformation.',
+    image: 'https://picsum.photos/608/408',
+    'data-ai-hint': 'artificial intelligence',
+  },
+  {
+    title: 'User Behavioral Profiling',
+    content:
+      'Discover how monitoring trading patterns, login habits, and app usage helps identify sudden deviations or impersonation attempts, providing early warnings for suspicious activity.',
+    image: 'https://picsum.photos/609/409',
+    'data-ai-hint': 'user behavior',
+  },
+  {
+    title: 'Network and Graph Analysis',
+    content:
+      'Apply network analysis to uncover coordinated fraud rings, pump-and-dump schemes, and abnormal relationships between trading accounts that may indicate illicit activities.',
+    image: 'https://picsum.photos/610/410',
+    'data-ai-hint': 'network graph',
+  },
+  {
+    title: 'Text & Semantic Analysis',
+    content:
+      'Utilize NLP models to scan stock tips, news, and social media posts for deceptive language, scam keywords, and manipulative narratives that could mislead investors.',
+    image: 'https://picsum.photos/611/411',
+    'data-ai-hint': 'text analysis',
+  },
+  {
+    title: 'Identity and Document Verification',
+    content:
+      'Understand how ML models verify uploaded documents and credentials against trusted databases to reduce impersonation and the presence of fake profiles in the financial ecosystem.',
+    image: 'https://picsum.photos/612/412',
+    'data-ai-hint': 'identity verification',
   },
 ];
 
