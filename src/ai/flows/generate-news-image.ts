@@ -35,7 +35,7 @@ const generateNewsImageFlow = ai.defineFlow(
   async (input) => {
     const { media } = await ai.generate({
         model: googleAI.model('imagen-4.0-fast-generate-001'),
-        prompt: `Generate a visually appealing and relevant image for a financial news article with the following summary: ${input.summary}. The image should be professional and suitable for a news website. Avoid text and sensationalism.`,
+        prompt: `Generate a high-quality, photorealistic image for a financial news article with the following summary: "${input.summary}". The image should be visually compelling, professional, and suitable for a news website. Focus on conceptual and thematic relevance rather than literal depiction. Avoid text, clutter, and sensationalism. Style: Cinematic, with a shallow depth of field.`,
         config: {
             responseModalities: ['IMAGE'],
         }
