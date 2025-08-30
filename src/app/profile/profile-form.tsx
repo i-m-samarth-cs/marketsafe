@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Loader2 } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef, ChangeEvent } from 'react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -40,6 +40,8 @@ const defaultValues: Partial<ProfileFormValues> = {
 export function ProfileForm() {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
+  const [avatarPreview, setAvatarPreview] = useState("https://i.pravatar.cc/150?u=a042581f4e29026704d");
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileFormSchema),
@@ -58,15 +60,33 @@ export function ProfileForm() {
     }, 1000);
   }
 
+  const handleAvatarChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setAvatarPreview(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <div className="flex items-center gap-4">
           <Avatar className="h-20 w-20">
-            <AvatarImage src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User avatar" />
+            <AvatarImage src={avatarPreview} alt="User avatar" />
             <AvatarFallback>AD</AvatarFallback>
           </Avatar>
-          <Button variant="outline">Change Photo</Button>
+          <input
+            type="file"
+            ref={fileInputRef}
+            onChange={handleAvatarChange}
+            className="hidden"
+            accept="image/*"
+          />
+          <Button type="button" variant="outline" onClick={() => fileInputRef.current?.click()}>Change Photo</Button>
         </div>
         <FormField
           control={form.control}

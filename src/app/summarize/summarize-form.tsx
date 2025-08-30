@@ -67,8 +67,10 @@ export function SummarizeForm() {
          toast({
             variant: "destructive",
             title: "Image Generation Failed",
-            description: "Could not generate a relevant image for the article.",
+            description: "Could not generate an AI image. This may be due to a billing requirement for the API. Using a placeholder image instead.",
          });
+         // Fallback to a placeholder
+         setImageResult({ imageUrl: 'https://picsum.photos/600/400' });
       } finally {
         setIsGeneratingImage(false);
       }
