@@ -5,6 +5,7 @@ import {
   CheckCircle,
   Newspaper,
   ShieldAlert,
+  Sparkles,
 } from 'lucide-react';
 
 import {
@@ -22,6 +23,24 @@ export default function DashboardPage() {
   return (
     <div className="flex flex-col gap-6">
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <Card className="lg:col-span-2">
+          <CardHeader>
+             <CardTitle className="flex items-center gap-2">
+              <Sparkles className="h-5 w-5 text-primary" />
+              Welcome to MarketSafe Lite
+            </CardTitle>
+            <CardDescription>
+              Your AI-powered assistant for navigating the financial world safely. Get started by exploring the features below.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Button asChild>
+              <Link href="/education">
+                Get Started <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </CardContent>
+        </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
@@ -94,8 +113,7 @@ export default function DashboardPage() {
             </Button>
           </CardContent>
         </Card>
-      </div>
-      <Card>
+       <Card className="lg:col-span-2">
         <CardHeader>
           <CardTitle>Risk Trend Analysis</CardTitle>
           <CardDescription>
@@ -106,6 +124,7 @@ export default function DashboardPage() {
           <RiskChart />
         </CardContent>
       </Card>
+      </div>
     </div>
   );
 }

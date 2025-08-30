@@ -6,6 +6,7 @@ import {
   LayoutDashboard,
   Newspaper,
   ShieldAlert,
+  User,
 } from 'lucide-react';
 import './globals.css';
 
@@ -102,6 +103,14 @@ export default function RootLayout({
                     <Link href="/education">
                       <BookOpen />
                       <span>Education</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+                 <SidebarMenuItem>
+                  <SidebarMenuButton asChild tooltip="Profile">
+                    <Link href="/profile">
+                      <User />
+                      <span>Profile</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
